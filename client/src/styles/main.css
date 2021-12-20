@@ -1,0 +1,453 @@
+@import url("./texto.css");
+@import url("./buttons.css");
+@import url("./footer.css");
+@import url("./backgrounds.css");
+
+
+@font-face {
+    font-family: RobotoCondensed;
+    src:  local('RobotoCondensed'), url(../fonts/RobotoCondensed-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src:  local('Roboto'), url(../fonts/Roboto-Regular.ttf);      
+}
+
+/* animacoes */
+
+@keyframes msgErro {
+    from {
+        box-shadow: 0 0 1em #CD2736;
+        background-color: #F78A94;
+    };
+    to {
+        box-shadow:  none;
+        background-color: #f8d7da;
+    };
+}
+@keyframes cardContainerView{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes navbarload {
+    0% { top: -75px;}
+    100% {top: 0px;}
+}
+@keyframes footerload{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes Cards {
+    0% { 
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }     
+}
+
+.alerta-aviso {
+    color: #ffffffcc;
+    background-color:  #ff8800;
+}
+
+/* borda header 1*/
+.borda-custom {
+    border-bottom: 1px solid rgba(59,71,150,0.1);
+}
+
+/* classes de posicionamento generalistas */
+
+.alR {
+    text-align: right;
+}
+.alE {
+    text-align: left;
+}
+.alC {
+    text-align: center;
+}
+.pt15 {
+    padding-top: 15px !important;
+}
+.pd20 {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+.pdRound20 {
+    padding: 15px 25px !important;
+}
+
+.brdbt5 {
+    border-radius: 0 0 5px 5px;
+}
+
+/* configurações principais */
+.App {
+    font-family: Roboto;
+    background-color: #eceff1;
+}
+.absolut_index, .App {
+    background: linear-gradient(90deg, #eceff1 21px, transparent 1%) center, linear-gradient(#eceff1 21px, transparent 1%) center, #6e6d70;
+    background-size: 22px 22px;
+    transition: all ease-in-out .5s;   
+}
+/* header */
+.navbar{
+    padding: 5px;
+    top: 0px;
+    animation-name: navbarload;
+    animation-duration: 1s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.headerUsr {
+    display: flex;
+    margin-right: 10px;
+}
+.headerUsr span{
+    margin: auto;
+}
+
+/* footer */
+
+#footer {
+    bottom: 0px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    animation-name: footerload;
+    animation-duration: 2s;
+}
+#ltr {
+    color:#536DFE;
+}
+
+/* efeitos de box shadow*/
+
+.bshadow5 {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.noShadowF:focus {
+    box-shadow: none;
+}
+.noBorder {
+    border: none !important;
+}
+
+/* filtro de blur */
+
+.filtro{
+    filter: brightness(50%) grayscale(100%);
+    height: 100%;
+    overflow: hidden;
+}
+.filtro::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+.filtroBlur {
+    filter: contrast(150%);
+    height: 100%;
+    overflow: hidden;
+}
+.filtroBlur::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+/* divs compartilhadas modal sobre, login */
+
+.headerbox{
+    font-family: RobotoCondensed;
+    border-radius: 5px 5px 0 0;
+    margin: 0px 0px 25px 0px;
+    padding: 17px 10px 15px 10px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* configuracoes do modal de login */
+
+#alertas {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin: 0 auto;
+    top: 25px;
+}
+#alertas .alert {
+    margin-bottom: .5rem !important;
+    transition: all ease-in-out .5s;
+}
+
+.modalsContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-modal, #sobrePlanosModais{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0px; 
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.absolut-div{
+    display: flex;
+    flex-direction: column;
+}
+.formAutenticao{
+    width: 300px;
+    height: 320px;
+    display: none;
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 5px 5px;
+    position: fixed;
+    transition: all ease-in-out .3s;
+    opacity: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.formAutenticao .form-group {
+    margin-bottom: 0;
+}
+
+.formAutenticao label{
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+.formAutenticao input::placeholder {
+    color: #a2aab9;
+}
+
+.formAutenticao input{
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+    background-color: #dedfea !important;
+    border: 0px solid #dedfea !important;
+    color: #283040 !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.formAutenticao .form-control:focus{
+    background-color: #fafcff !important;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+#loginError {
+    animation-name: msgErro;
+    animation-duration: 4s;
+    transition: all 1s;
+    box-shadow:  none;
+}
+
+/* modal sobre */
+
+.modal-sobre, .modal-showProdHome, .modal-showProdUsr{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 600px;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    transition: all ease-in-out .5s;
+    opacity: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.modal-sobre .headerbox, .modal-showProdHome .headerbox, .modal-showProdUsr .headerbox{
+    margin: 0;
+}
+#texto-sobre{
+    padding: 30px 30px 20px 30px;
+    background-color: #FFFFFF;
+}
+#texto-tec ul {
+    margin-bottom: 20px;
+}
+#texto-tec ul li {
+    margin: 3px 0;
+    display: flex;
+}
+#sobre-footer {
+    padding: 15px 25px 30px 25px;
+    border-radius: 0 0 5px 5px;
+    background-color: #FFFFFF;
+}
+
+.minicardcont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 25px 25px 25px;
+    background-color: #FFFFFF;
+}
+
+.minicardSobre {
+    margin: 15px 5px 0 5px;
+    width: 110px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12),inset 0 1px 2px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: column;
+    background-color: #eceff1;
+}
+
+.minicardSobre img {
+    height: 55px;
+    margin: 10px auto;
+}
+
+.minicardSobre span {
+    margin: auto 0;
+    text-align: center;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+    font-family: RobotoCondensed;
+}
+
+/* cards com anuncios */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 6px 6px 6px;
+    opacity: 0;
+}
+.card-container.containerView {
+    animation: cardContainerView 1.2s ease-in;
+    opacity: 1;
+}
+.card {
+    width: 546px;
+    margin: 6px 0 0 0 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    visibility: hidden;
+}
+.card_imagem {
+    border-radius: 4px 4px 0 0;
+    display: flex;
+}
+.card.is-visible {
+    animation: Cards 600ms ease-in forwards;
+    visibility: visible;
+}
+
+/* background dos cards */
+
+.card_imagem .imgcontainer{
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    height: 260px;
+    width: 100%;
+}
+.card_imagem img {
+    margin: auto;
+    object-fit: cover;
+    width: auto;
+    height: 80%;
+}
+.card-footer {
+    color: #FFFFFF !important;
+    padding: 0.8rem 1.5rem;
+    font-size: 16px;
+    font-family: RobotoCondensed;
+    border-radius: 0 0 3px 3px !important;
+    cursor: pointer;
+    transition: all .5s;
+}
+.card-footer:hover{
+    background-color: #2C3BBF;
+}
+
+/* animação de loading */
+#loading {
+    position: fixed;
+}
+#loading svg {
+    display: none;
+    width: 90px;
+    height: 90px;
+    animation: rodar 1s linear infinite;
+    margin: auto;
+}
+
+#loading svg circle {
+    margin: auto;
+    fill: none;
+    stroke: #6b81ff98;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    transform: translate(5px, 5px);
+    animation: loadAnimation 3s infinite;
+}
+@keyframes rodar {
+    0% {
+        transform: rotate(0deg);
+    }100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes loadAnimation {
+    0%, 100% {
+        stroke-dashoffset: 250;
+    } 50% {
+        stroke-dashoffset: 0;
+        stroke: #64ffda;
+    } 50.1%{
+        stroke-dashoffset: 580;
+    }
+}
+
+
+/* media queries */
+
+@media screen and (max-width: 991px){
+    .headerUsr {
+        margin-right: 0;
+    }
+    .headerUsr span{
+        margin: auto 3px;
+    }
+    .navbar-nav li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .modal-sobre, .modal-showProdHome, .modal-showProdUsr{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .card {
+        width: 455px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .card {
+        width: 100%;
+    }
+}

@@ -1,0 +1,164 @@
+.custombtn1, .custombtn2, .custombtn3 {
+    color: #ffffffcc;
+    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.custombtn1:hover, .custombtn2:hover, .custombtn3:hover, .custombtn5:hover, .custombtn6, .custombtn6:hover {
+    color: #FFFFFF;
+    box-shadow: none;
+}
+.custombtn1{
+    font-size: 14px;
+    background-color: #3b59ff;
+    font-family: RobotoCondensed;    
+}
+.custombtn1:hover{    
+    background-color: #546eff;    
+}
+
+.custombtn2{
+    font-size: 14px;
+    background-color: #00acc1;
+    font-family: RobotoCondensed;
+}
+.custombtn2:hover{
+    background-color: #00bcd4;
+}
+.custombtn2:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(151, 115, 255, 0.25);
+}
+
+.custombtn3{
+    font-size: 14px;
+    background-color: #43a047;
+    border: none;
+    font-family: RobotoCondensed;
+    display: flex;
+    transition: all ease-in-out .3s;
+}
+.custombtn3:hover{
+    background-color: #4caf50;
+}
+.custombtn3 span, .custombtn3 img {
+    margin: auto;
+}
+.custombtn3 img {
+    margin: auto 10px auto auto !important;
+}
+
+.custombtn4{
+    color: #ffffffcc;    
+    font-size: 14px;
+    background-color: #4caf50;
+    font-family: RobotoCondensed;
+    box-shadow: inset 0 0px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.custombtn4:hover {
+    cursor: default;
+    color: #ffffffcc;
+}
+
+.custombtn5{
+    color: #ffffffcc;
+    font-size: 14px;
+    background-color: #fc3952;
+    font-family: RobotoCondensed;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.12), 0 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+.custombtn5:hover {
+    color: #ffffff;
+    background-color: #ff5369;
+}
+
+.custombtn6{
+    color: #ffffffcc;
+    font-size: 14px;
+    background-color: #ff8800;
+    font-family: RobotoCondensed;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.12), 0 1px 2px 0px rgba(0, 0, 0, 0.24);
+}
+.custombtn6:hover {
+    color: #ffffff;
+    background-color: #ff3d00;
+}
+
+
+.alterPgBtnAnt {
+    border: 1px solid #ffffff;
+    border-radius: 0 9px 9px 0;
+    transition: all ease-in-out .5s;
+}
+.alterPgBtnPrx {
+    border-radius: 9px 0 0 9px;
+}
+.alterPgBtnAnt:hover, .alterPgBtnPrx:hover {
+    border-color: rgba(0, 0, 0, 0.24);
+} 
+
+
+.btn-escolhaPl {
+    margin-left: 8px;
+    font-size: 14px;
+    font-family: RobotoCondensed;
+    color: #FFFFFF !important;
+    opacity: 1;
+    transition: all .2s;
+}
+
+.btn-escolhaPl2 {
+    font-size: 14px;
+    font-family: RobotoCondensed;
+    color: #FFFFFF !important;
+    opacity: 1;
+    transition: all .2s;
+}
+
+/* botao do modal de login */
+
+.modal-content button{
+    display: block;
+    background-color: #161B23;
+    width: 35%;
+    margin: 15px auto 0 23px;
+    padding: 0.5rem 0.75rem;
+    font-family: RobotoCondensed;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.modal-content button:hover{
+    background-color: #536DFE;
+}
+
+.modal-content .custom-control{
+    padding-left: 40px;
+}
+
+#lixeira:focus {
+    box-shadow: none;
+}
+
+/* botão fechar generalista */
+
+.fechar {
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 26px;
+    height: 26px;
+    background-color: #dd2c00;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .3s;
+    display: flex;
+}
+.fechar:hover {
+    background-color: #ff3d00;    
+}
+
+.fechar_btn {
+    margin: auto;
+    width: 14px;
+    height: 14px;
+}

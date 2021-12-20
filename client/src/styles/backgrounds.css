@@ -1,0 +1,65 @@
+
+.bg-cor1{
+    background-color: #161B23;
+}
+.bg-cor2{
+    background-color: #3b475e;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-cor3{
+    background-color: #536DFE;
+}
+.bg-cor3_5 {
+    background-color: #603cff;
+}
+.bg-cor4{
+    background-color: #FFFFFF;
+}
+.bg-cor5 {
+    background-color: #ff3612;
+}
+.bg-divisivo {
+    background-color: #BDBDBD;
+}
+.bgleve {
+    background-color: #edf0fc;
+}
+
+.bg-cards {
+    background: radial-gradient(circle, #3B475E, #252C3B);
+}
+
+.bgPl1 {
+    color: #37474f !important;
+    background-color: #00e5ff;
+}
+.bgPl1:hover {
+    background-color: #18ffff;
+}
+.bg-express {
+    background-color: #464a52;
+}
+.bg-css3 {
+    background-color: #007bff;
+}
+.bg-react {
+    background-color: #3cceff;
+}
+.bg-js {
+    background-color: #ffe712;
+}
+.bg-bootstrap {
+    background-color: #6538ff;
+}
+.bg-jquery {
+    background-color: #2e5fce;
+}
+.bg-node {
+    background-color: #259846;
+}
+.bg-postgres {
+    background-color: #27649e;
+}

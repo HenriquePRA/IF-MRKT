@@ -1,0 +1,48 @@
+
+.texto_escuro {
+    color: #212121;
+}
+.texto_azul {
+    color: #4f2afc;
+}
+.texto_roxo {
+    color: #8400ffc4;    
+}
+
+.texto_perigo {
+    color: #ff8898e0;
+}
+
+.texto_claro {
+    color: #FFFFFF !important;
+}
+.texto_cinza {
+    color: #3b475e;
+}
+.texto_secundario {
+    color: #8a8a8a;
+}
+.texto_semiTransparente {
+    color: #ffffffba;
+}
+.texto_azulado {
+    color: #12004c;
+}
+.linkTxt {
+    color: #007bff;
+    text-decoration: none;
+}
+.linkTxt:hover {
+    cursor: pointer;
+    color: #0056b3;
+    text-decoration: underline;
+}
+.font600 {
+    font-weight: 600;
+}
+.size12 {
+    font-size: 12px;
+}
+.size20 {
+    font-size: 20px;
+}
