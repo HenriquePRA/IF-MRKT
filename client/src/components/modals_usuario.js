@@ -254,7 +254,7 @@ const AlterCidadeBtnCidade = () => {
 
  // busca pela lista de estados
  const getEstados = async () => {
-    const url = "http://localhost:7777/consulta/estados";
+    const url = "http://18.231.108.8:7777/consulta/estados";
     const response = await fetch(url);
     const resjson = await response.json();
     return resjson;
@@ -263,7 +263,7 @@ const AlterCidadeBtnCidade = () => {
 
 // busca pela lista de cidades de um estado
 const getCidades = async (uf) => {
-    const url = "http://localhost:7777/consulta/cidades/" + uf;
+    const url = "http://18.231.108.8:7777/consulta/cidades/" + uf;
     const response = await fetch(url);
     const resjson = await response.json();
     return resjson;
@@ -398,7 +398,7 @@ const ModalsUsuario = (props) => {
             document.querySelector('#modMensagem').style.opacity = '1';
             props.setLoading(false)
         } else {
-            axios.post("http://localhost:7777/adicionar/mensagem", { destinatario: usrDestino, titulo: titulo, mensagem: mensagem }, config)
+            axios.post("http://18.231.108.8:7777/adicionar/mensagem", { destinatario: usrDestino, titulo: titulo, mensagem: mensagem }, config)
             .then((response) => {
                 if (response.status === 200) {
                     setTimeout(() => {
@@ -445,7 +445,7 @@ const ModalsUsuario = (props) => {
                     token: token
                 },
             }
-            axios.post("http://localhost:7777/adicionar/contato", {"email": email}, config)
+            axios.post("http://18.231.108.8:7777/adicionar/contato", {"email": email}, config)
             .then((response) => {
                 if (response.status === 200) {                    
                     setTimeout(() => {
@@ -508,7 +508,7 @@ const ModalsUsuario = (props) => {
                     token: token
                 },
             }
-            axios.post("http://localhost:7777/alterar/nome", {nome: NovoNome}, config)
+            axios.post("http://18.231.108.8:7777/alterar/nome", {nome: NovoNome}, config)
             .then((response) => {
                 if (response.status === 200) {                    
                     setTimeout(() => {
@@ -557,7 +557,7 @@ const ModalsUsuario = (props) => {
                     token: token
                 },
             }
-            axios.post("http://localhost:7777/alterar/email", {email: NovoEmail}, config)
+            axios.post("http://18.231.108.8:7777/alterar/email", {email: NovoEmail}, config)
             .then((response) => {
                 if (response.status === 200) {
                     setTimeout(() => {
@@ -624,7 +624,7 @@ const ModalsUsuario = (props) => {
                     token: token
                 },
             }
-            axios.post("http://localhost:7777/alterar/senha", {
+            axios.post("http://18.231.108.8:7777/alterar/senha", {
                 SenhaAnterior: SenhaAnterior,
                 NovaSenha: NovaSenha1
             }, config)
@@ -689,7 +689,7 @@ const ModalsUsuario = (props) => {
                     token: token
                 },
             } 
-            axios.post("http://localhost:7777/alterar/cidade", {
+            axios.post("http://18.231.108.8:7777/alterar/cidade", {
                 cidade: cidade,
                 estado: uf
             }, config)
@@ -741,7 +741,7 @@ const ModalsUsuario = (props) => {
             document.querySelector('#modAlterBairro').style.opacity = '1';
             props.setLoading(false)
         } else {
-            axios.post("http://localhost:7777/alterar/bairro", { bairro: bairro }, config)
+            axios.post("http://18.231.108.8:7777/alterar/bairro", { bairro: bairro }, config)
             .then((response) => {
                 if (response.status === 200) {
                     setTimeout(() => {
@@ -789,7 +789,7 @@ const ModalsUsuario = (props) => {
             document.querySelector('#modAlterEndereco').style.opacity = '1';
             props.setLoading(false)
         } else {
-            axios.post("http://localhost:7777/alterar/endereco", { endereco: endereco }, config)
+            axios.post("http://18.231.108.8:7777/alterar/endereco", { endereco: endereco }, config)
             .then((response) => {
                 if (response.status === 200) {
                     setTimeout(() => {
@@ -820,7 +820,7 @@ const ModalsUsuario = (props) => {
                 token: token
             },
         }
-        axios.post("http://localhost:7777/remover/contatos", { contatos: selectedContatos }, config)
+        axios.post("http://18.231.108.8:7777/remover/contatos", { contatos: selectedContatos }, config)
         .then((response) => {
             gerarAlerta(response.data.status, "alert-success", "permanente")
             setTimeout(() => {
@@ -876,7 +876,7 @@ const ModalsUsuario = (props) => {
             props.setLoading(false)
 
         } else {
-            axios.post("http://localhost:7777/adicionar/produto", { nome: nome, descricao: descricao, valor: valor, usado: usado, servico: servico, negociavel:negociavel }, config)
+            axios.post("http://18.231.108.8:7777/adicionar/produto", { nome: nome, descricao: descricao, valor: valor, usado: usado, servico: servico, negociavel:negociavel }, config)
             .then((response) => {
                 gerarAlerta(response.data.status, "alert-success", "permanente")
                 setTimeout(() => {

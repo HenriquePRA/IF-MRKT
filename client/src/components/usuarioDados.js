@@ -31,7 +31,7 @@ const UsuarioDados = (props) => {
             token: token
             }
         }
-        await axios.get('http://localhost:7777/consulta/usuarioDados', config)
+        await axios.get('http://18.231.108.8:7777/consulta/usuarioDados', config)
         .then(response => {
             setNome(response.data.data.nome)
             setEmail(response.data.data.email)

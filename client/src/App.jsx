@@ -39,7 +39,7 @@ const App = () => {
     let config = {headers: {token: token}}
     
     if (token != null) {
-      await axios.get("http://localhost:7777/verificarToken", config)
+      await axios.get("http://18.231.108.8:7777/verificarToken", config)
       .then((response) => {
         if (response.data.status === "valido") {
           // o token existnte é válido

@@ -15,7 +15,7 @@ const Usuario = (props) => {
     const exibirCompras = props.exibirCompras
     
     const getAllProducts = useCallback(() => new Promise((resolve) => {
-        axios.get("http://localhost:7777/consulta/produtos")
+        axios.get("http://18.231.108.8:7777/consulta/produtos")
         .then((response) => {
             setProducts(response.data)
             resolve()

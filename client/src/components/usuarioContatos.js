@@ -37,7 +37,7 @@ const UsuarioContatos = (props) => {
                 token: token
             },
         }
-        axios.get("http://localhost:7777/consulta/usuarioContatos", config)
+        axios.get("http://18.231.108.8:7777/consulta/usuarioContatos", config)
         .then((response) => {
             if (quantidade === 6) {
                 let contatos = []
