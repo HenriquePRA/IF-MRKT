@@ -2,13 +2,20 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
+const path = require("path");
 const app = express();
-const db = require("./db");
 
 // middleware //
 app.use(cors())
 app.use(express.json())
 
+app.use(express.static(path.join(__dirname, "client/build")));
+
+if (process.env.NODE_ENV === "production") {
+    // serve static content
+    // npm run build
+    app.use(express.static(path.join(__dirname, "client/build")));
+}
 
 // consultas generalistas que não necessitam de autenticação
 app.use("/consulta", require("./routes/consultas.js"))
@@ -50,7 +57,7 @@ app.get("/verificarToken", async (req, res) => {
 })
 
 // execução do servidor
-const port = process.env.PORT || 5555
-app.listen(port, ()=> {
-    console.log(`Servidor IF-Mrkt online na porta ${port}`);
+const porta = process.env.PORT || 7777
+app.listen(porta, ()=> {
+    console.log(`Servidor IF-Mrkt online na porta ${porta}`);
 });

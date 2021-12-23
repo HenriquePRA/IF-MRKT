@@ -23,7 +23,7 @@ const UsuarioProdutos = (props) => {
                 token: token
             },
         }
-        axios.get("http://18.231.108.8:7777/consulta/usuarioProdutos", config)
+        axios.get("/consulta/usuarioProdutos", config)
         .then((response) => {
             setProdutos(response.data.data) 
             resolve()
@@ -52,7 +52,7 @@ const UsuarioProdutos = (props) => {
             },
         }
 
-        axios.post("http://18.231.108.8:7777/remover/produto", { idproduto: idProd }, config)
+        axios.post("/remover/produto", { idproduto: idProd }, config)
         .then((response) => {
             gerarAlerta(response.data.status, "alert-success", "permanente")
             props.setLoading(false)

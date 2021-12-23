@@ -40,7 +40,7 @@ const exibirSucesso = (dados) => new Promise ((resolve) => {
 
  // busca pela lista de estados
 const getEstados = async () => {
-    const url = "http://18.231.108.8:7777/consulta/estados";
+    const url = "/consulta/estados";
     const response = await fetch(url);
     const resjson = await response.json();
     return resjson;
@@ -49,7 +49,7 @@ const getEstados = async () => {
 
 // busca pela lista de cidades de um estado
 const getCidades = async (uf) => {
-    const url = "http://18.231.108.8:7777/consulta/cidades/" + uf;
+    const url = "/consulta/cidades/" + uf;
     const response = await fetch(url);
     const resjson = await response.json();
     return resjson;
@@ -120,7 +120,7 @@ const Cadastro = (props) => {
 
         e.preventDefault()
         
-        axios.post('http://18.231.108.8:7777/cadastro', formulario)
+        axios.post('/cadastro/usuario', formulario)
         .then(response => {
             cadastroHandler(response).then(() => {
                 setShowAuth({

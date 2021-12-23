@@ -9,7 +9,7 @@ const Home = () => {
     const [ products, setProducts ] = useState([])
 
     const getAllProducts = useCallback(() => new Promise((resolve) => {
-        axios.get("http://localhost:7777/consulta/produtos")
+        axios.get("/consulta/produtos")
         .then((response) => {
             setProducts(response.data)
             resolve()

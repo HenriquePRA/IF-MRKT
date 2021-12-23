@@ -35,7 +35,7 @@ const UsuarioMensagem = (props) => {
                 token: token
             },
         }
-        axios.get("http://18.231.108.8:7777/consulta/usuarioMensagens", config)
+        axios.get("/consulta/usuarioMensagens", config)
         .then((response) => {
             setMensagens(response.data.data) 
             resolve()

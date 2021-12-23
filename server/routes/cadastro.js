@@ -3,7 +3,7 @@ const db = require("../db");
 const bcrypt = require("bcrypt");
 require("dotenv").config();
 
-router.post("/", async (req, res) => {
+router.post("/usuario", async (req, res) => {
 
     function senhaInsegura (senha) {
         const letras_minusculas = 'abcdefghijklmnopqrstuvwxyz';

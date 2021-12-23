@@ -78,7 +78,7 @@ function ModuloAuth (props) {
             document.querySelector("#login_form").style.opacity = "0";
             setTimeout(() => {
                 const manterAuth = document.querySelector('#customSwitch1').checked
-                axios.post('http://localhost:7777/login',
+                axios.post('/login',
                 {
                     login: props.showAuth.login,
                     senha: senha,
